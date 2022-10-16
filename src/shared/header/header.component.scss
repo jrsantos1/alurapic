@@ -1,0 +1,36 @@
+.header{
+  height: 100px;
+  background-color: rgba(4, 107, 197, 0.438);
+}
+
+.lista{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lista li{
+  list-style: none;
+  list-style-type: none;
+  padding: 10px;
+}
+.lista li a{
+ text-decoration: none;
+ color: rgb(19, 0, 113);
+}
+
+.lista li a:hover{
+  background-color: rgba(22, 101, 138, 0.159);
+  height: 100%;
+  padding: 47px 0px 44px 0px;
+  border-bottom: 3px solid red;
+  font-weight: bold;
+
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+
+}
