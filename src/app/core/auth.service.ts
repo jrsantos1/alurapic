@@ -1,3 +1,4 @@
+import { UserService } from 'src/app/core/user/user.service';
 import { TokenService } from './token/token.service';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -9,13 +10,13 @@ const API_URL = 'http://localhost:3000';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient, private tokenService: TokenService) { }
+  constructor(private http: HttpClient, private tokenService: TokenService, private userService: UserService) { }
 
   authenticate(userName: string, password: string){
     return this.http.post(API_URL + '/user/login', {userName, password }, {observe: 'response'})
     .pipe(tap(res => {
       const authToken = res.headers.get('x-access-token');
-      this.tokenService.setToken(authToken)
+      this.userService.setToken(authToken);
       console.log(authToken)
     }))
 
