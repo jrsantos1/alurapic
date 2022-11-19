@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SharedModule } from 'src/shared/shared.module';
 import { ErrorsModule } from './errors/errors.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import modules
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ErrorsModule } from './errors/errors.module';
     HttpClientModule,
     SharedModule,
     ErrorsModule,
-    HomeModule
+    HomeModule,
+    FontAwesomeModule
 
 
   ],

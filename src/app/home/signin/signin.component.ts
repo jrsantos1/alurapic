@@ -3,11 +3,14 @@ import { AuthService } from './../../core/auth.service';
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   templateUrl: '/signin.component.html'
 })
 export class SigninComponent implements OnInit{
+
+  faCircle = faCircle;
 
   loginForm!: FormGroup;
   @ViewChild('userNameInput') userNameInput!: ElementRef<HTMLInputElement>;
